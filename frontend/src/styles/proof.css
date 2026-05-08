@@ -1,0 +1,190 @@
+.proof-card,
+.proof-list-card {
+  max-width: 900px;
+}
+
+.proof-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  resize: vertical;
+}
+
+.proof-card textarea:focus {
+  border-color: #111;
+}
+
+.proof-list {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.proof-item {
+  border: 1px solid #d7d7d2;
+  border-radius: 10px;
+  background: #f8f7f3;
+  padding: 14px;
+}
+
+.proof-item p a,
+.proof-item p button,
+.proof-item button.btn.ghost {
+  color: #000000 !important;
+  text-decoration: underline;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  cursor: pointer;
+  transition: opacity 0.16s ease;
+  display: inline !important;
+  box-shadow: none !important;
+}
+
+.proof-inline p a,
+.proof-inline p button:not(.btn),
+.proof-inline .proof-inline-link {
+  color: #000000 !important;
+  text-decoration: underline;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  cursor: pointer;
+  transition: opacity 0.16s ease;
+  display: inline !important;
+  box-shadow: none !important;
+}
+
+.proof-item p a:hover,
+.proof-item button.btn.ghost:hover {
+  color: #000000;
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.proof-inline p a:hover,
+.proof-inline p button:not(.btn):hover,
+.proof-inline .proof-inline-link:hover {
+  color: #000000;
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.proof-item-label {
+  color: #383838;
+}
+
+.proof-item-text {
+  color: #383838;
+}
+
+.proof-modal-image {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.proof-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.proof-item h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.proof-actions {
+  margin-top: 10px;
+}
+
+.proof-inline {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ecebe7;
+  background: #ffffff;
+  font-size: 13px;
+}
+
+.proof-inline-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.proof-inline-title {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.proof-inline-tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.proof-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 20px;
+  z-index: 60;
+  overflow-y: auto;
+}
+
+.proof-modal-card {
+  width: min(760px, 100%);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+}
+
+.proof-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.proof-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.proof-modal-close {
+  border: none;
+  background: #f3f4f6;
+  color: #1f2937;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.proof-modal-close:hover {
+  background: #e5e7eb;
+}

@@ -1,0 +1,134 @@
+.matching-card {
+  max-width: 980px;
+}
+
+.matching-list {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.matching-item {
+  border: 1px solid #d6d6d2;
+  background: #f8f7f3;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.matching-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.matching-item h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.matching-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  color: #444;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.matching-actions {
+  margin-top: 12px;
+}
+
+.matching-review {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ecebe7;
+  background: #ffffff;
+}
+
+.matching-review-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.matching-review-title {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.matching-review-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  font-size: 14px;
+  color: #3f3f3c;
+}
+
+.matching-review-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.matching-review-label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.matching-review-feedback label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.matching-review-feedback textarea {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.matching-review-feedback textarea:focus {
+  border-color: #111;
+}
+
+.score-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.score-high {
+  background: #d8f6e3;
+  color: #106339;
+}
+
+.score-medium {
+  background: #e8eefc;
+  color: #1640a3;
+}
+
+.score-low {
+  background: #fce9d8;
+  color: #9b4f00;
+}
+
+@media (max-width: 800px) {
+  .matching-meta {
+    grid-template-columns: 1fr;
+  }
+}
