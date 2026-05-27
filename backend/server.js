@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
-const path = require("path");
+const path = require("path"); // <-- Imported here (only once)
 const connectDB = require("./config/db");
 const validateEnv = require("./utils/validateEnv");
 const sanitizeRequest = require("./middleware/sanitizeMiddleware");
@@ -73,16 +73,19 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  return res.status(200).json({
-    success: true,
-    message: "API is running",
-    data: null,
-  });
+// --- REACT FRONTEND SERVING CODE GOES HERE ---
+// 1. Serve static files from the Vite 'dist' folder
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// 2. Catch-all route: Send all other requests to the React index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
+// --- ERROR HANDLERS MUST BE AT THE VERY BOTTOM ---
 app.use(notFound);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5090;
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
