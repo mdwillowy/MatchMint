@@ -78,7 +78,7 @@ app.get("/api/health", (req, res) => {
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 // 2. Catch-all route: Send all other requests to the React index.html
-app.get('*', (req, res) => {
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
